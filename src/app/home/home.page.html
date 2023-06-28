@@ -1,22 +1,103 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header [translucent]="true"></ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="mobile">
+    <div class="mobile-devic">
+        <ion-grid>
+          <ion-row size="12">
+            <h2 class="tittle">Calculadora PW IV</h2>
+          </ion-row>
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
+          <div class="result">
+            <ion-label size="large" expand="full">{{result}}</ion-label>
+          </div>
+
+            <ion-row>
+              <ion-col size="3" (click)="LimpaResultado()">
+                <ion-button shape="round" size="large" expand="block" class="high" id="clean">AC</ion-button>
+              </ion-col>
+
+              <ion-col size="3" (click)="AddValor('%')">
+                <ion-button shape="round" size="large" expand="block" class="high">%</ion-button>
+              </ion-col>
+
+              <ion-col size="3" (click)="LimpaValor()">
+                <ion-button shape="round" size="large" expand="block" class="high"><ion-icon name="Backspace"></ion-icon></ion-button>
+              </ion-col>
+
+              <ion-col size="3" (click)="AddValor('/')">
+                <ion-button shape="round" size="large" expand="block" class="low">/</ion-button>
+              </ion-col>
+
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="3" (click)="AddValor('7')">
+                <ion-button shape="round" size="large" expand="block" class="meddium">7</ion-button>
+              </ion-col>
+
+              <ion-col size="3" (click)="AddValor('8')">
+                <ion-button shape="round" size="large" expand="block" class="meddium">8</ion-button>
+              </ion-col>
+
+              <ion-col size="3" (click)="AddValor('9')">
+                <ion-button shape="round" size="large" expand="block" class="meddium">9</ion-button>
+              </ion-col>
+              <ion-col size="3" (click)="AddValor('*')">
+                <ion-button shape="round" size="large" expand="block" class="low">X</ion-button>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="3" (click)="AddValor('4')">
+                <ion-button shape="round" size="large" expand="block" class="meddium">4</ion-button>
+              </ion-col>
+
+              <ion-col size="3" (click)="AddValor('5')">
+                <ion-button shape="round" size="large" expand="block" class="meddium">5</ion-button>
+              </ion-col>
+
+              <ion-col size="3" (click)="AddValor('6')">
+                <ion-button shape="round" size="large" expand="block" class="meddium">6</ion-button>
+              </ion-col>
+
+              <ion-col size="3" (click)="AddValor('-')">
+                <ion-button shape="round" size="large" expand="block" class="low">-</ion-button>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="3" (click)="AddValor('1')">
+                <ion-button shape="round" size="large" expand="block" class="meddium">1</ion-button>
+              </ion-col>
+
+              <ion-col size="3" (click)="AddValor('2')">
+                <ion-button shape="round" size="large" expand="block" class="meddium">2</ion-button>
+              </ion-col>
+
+              <ion-col size="3" (click)="AddValor('3')">
+                <ion-button shape="round" size="large" expand="block" class="meddium">3</ion-button>
+              </ion-col>
+
+              <ion-col size="3" (click)="AddValor('+')">
+                <ion-button shape="round" size="large" expand="block" class="low">+</ion-button>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="3" (click)="AddValor('0')">
+                <ion-button shape="round" size="large" expand="block" class="meddium">0</ion-button>
+              </ion-col>
+
+              <ion-col size="3" (click)="AddValor('.')">
+                <ion-button shape="round" size="large" expand="block" class="meddium">,</ion-button>
+              </ion-col>
+
+              <ion-col size="6" (click)="Calcula()">
+                <ion-button shape="round" size="large" expand="block" class="low">=</ion-button>
+              </ion-col>
+          </ion-row>
+        </ion-grid>
+    </div>
   </div>
 </ion-content>
